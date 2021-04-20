@@ -20,6 +20,8 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 // app.use(express.json());
 
+app.use(cookieParser());
+
 const mongoose = require('mongoose');
 // use~ 써주는 이유 : 안써주면 에러가 가끔 날때가 있음.
 
@@ -107,6 +109,19 @@ app.get('/api/users/auth', auth, (req, res) => {
     })
 })
 
-
+app.get('/api/users/logout', auth, (req, res) => {
+    // findOneAndUpdate : Update문
+    // 1:선택자, 2:업데이트할 내용, 3. callback
+    User.findOneAndUpdate({
+        _id: req.user._id
+    }, 
+    {token: ""}, (err, user) => {
+        if(err) return res.json({success:false, err});
+        // .send() >> : 결과값을 text로 보낸다.
+        return res.status(200).send({
+            success: true
+        })
+    })
+})
 
 app.listen(port, ()=> util.log(`Example app listening on port ${port}!`));
