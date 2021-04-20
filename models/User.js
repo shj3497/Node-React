@@ -99,6 +99,32 @@ userSchema.methods.generateToken = function(cb){
     })
 }
 
+// .static .methods의 차이 
+// static : java에서의 static, 객체를 생성하지 않고 바로 데이터에 접근 가능
+// method : java에서의 method, 객체 인스턴스가 살아 있을 때 키워드로 되어있는 함수를 호출
+userSchema.statics.findByToken = function(token, cb){
+    var user = this;
+
+    // 토큰을 decode 한다.
+    jwt.verify(token, 'secretToken', function(err, decoded){
+        // 유저 id를 이용해서 유저를 찾은 다음 
+        // client에서 가져온 token과 DB에 보관된 token이 일치하는지 확인
+        user.findOne({
+            "_id": decoded,
+            "token": token
+        }, function(err, user){
+            if(err){
+                return cb(err);
+            }else{
+                util.log(`findOne user >>> : ${user}`)
+                return cb(null, user);
+            }
+        })
+    })
+}
+
+
+
 // 스키마를 만들고 모델로 감싸준다.
 const User = mongoose.model('User', userSchema);
 
