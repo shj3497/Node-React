@@ -21,3 +21,9 @@
 1. JSX(우선 HTML)을 렌더링 한다. >> Virtual DOM Update
 2. Virtual DOM이 이전 Virtual DOM에서 찍어둔 Snapshot과 비교해서 바뀐 부분을 찾는다. >> 이 과정을 "diffing"이라고 부름
 3. 그 바뀐 부분만 Real DOM에서 바꿔준다.
+
+### Babel
+
+- 최신 자바스크립트 문법을 지원하지 않는 브라우저들을 위해서 최신 자바스크립트 문법을 구형 브라우저에서도 쓸 수 있게 변환 시켜준다.
+
+### Webpack
