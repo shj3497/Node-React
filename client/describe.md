@@ -11,7 +11,20 @@
     - LoginPage
     - NavBar
     - RegisterPage
-    - App.js : Routing 관련 일을 처리
-    - Config.js : 환경 변수같은 것들을 정하는 곳
+  - App.js : Routing 관련 일을 처리
+  - Config.js : 환경 변수같은 것들을 정하는 곳
   - hoc : Higher Order Component의 약자로 권한 여부에 따라 접근을 제한할 수 있다.
   - utils : 여러곳에서 쓰일 수 있는 것들을 이곳에 넣어둬서 어디서든 쓸 수 있게 해준다.
+
+### React Router Dom
+
+- react는 페이지 이동을 할 때 React Router Dom 이라는 것을 사용한다.
+- [어떻게 사용하는지 참조](https://reactrouter.com/web/example/basic)
+- Dependency 다운로드
+
+  - npm install react-router-dom --save
+
+- App.js에서 <Switch> 태그의 사용 이유
+  - Switch 없이 Route만 있다면 모든 Route들이 렌더링 된다.
+  - Route 에서 exact path는 주어진 경로가 정확해야 설정한 컴포넌트가 보여진다.
+- Vue.js에서의 template를 생성해서 화면을 구성했다면, React에서는 함수로 만들어서 <함수명>으로 화면을 구성하네..
