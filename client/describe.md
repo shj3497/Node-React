@@ -28,3 +28,19 @@
   - Switch 없이 Route만 있다면 모든 Route들이 렌더링 된다.
   - Route 에서 exact path는 주어진 경로가 정확해야 설정한 컴포넌트가 보여진다.
 - Vue.js에서의 template를 생성해서 화면을 구성했다면, React에서는 함수로 만들어서 <함수명>으로 화면을 구성하네..
+
+### AXIOS
+
+- Dependency 다운로드
+
+  - npm install axios --save
+
+- jQuery를 사용할 때 AJAX라고 보면 된다.
+
+### Proxy
+
+- Dependency 다운로드
+  - npm install http-proxy-middleware --save
+- 현재 서버는 5000번 포트를, client는 3000번 포트를 사용중
+- 포트가 다르기 떄문에 서버와 client의 통신 X
+- Proxy를 사용하여 해결할 것

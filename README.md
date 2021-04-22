@@ -36,6 +36,8 @@ Node.js 기초 React.js 기초
 
 - npx create-react-app .
 - npm install react-router-dom --save
+- npm install axios --save
+- npm install http-proxy-middleware --save
 
 [DOM summary](./summary.md)
 [React.js summary](./client/describe.md)

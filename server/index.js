@@ -37,6 +37,8 @@ mongoose.connect(config.mongoURI, {
 
 app.get('/', (req, res) => res.send('Hello World!'))
 
+// Client(Postman) 통신
+
 app.post('/api/users/register', (req, res) => {
 
     // 회원가입시 필요한 정보들을 client에서 가져오면
@@ -125,3 +127,9 @@ app.get('/api/users/logout', auth, (req, res) => {
 })
 
 app.listen(port, ()=> util.log(`Example app listening on port ${port}!`));
+
+// Client(React) 통신
+app.get('/api/hello', (req, res) => {
+
+    res.send('안녕하세요 ~ !');
+})
