@@ -126,39 +126,41 @@ state = {
 
 ### Redux 데이터 Flow
 
-- React Component - (Dispatch) -> Action --> Reducer --> Store - (Subscribe) -> React Component - (Dispatch) -> Action
+```
+React Component - (Dispatch) -> Action --> Reducer --> Store - (Subscribe) -> React Component - (Dispatch) -> Action
+```
 
-  ### Action
+### Action
 
-  - a plain object describing what happend.
+- a plain object describing what happend.
 
-  ```javascript
-  {
-    type: 'LIKE_ARTICLE',
-    articleId: 42
-  }
-  {
-    type: 'FETCH_USER_SUCCESS',
-    response: {id: 3, name:'Mary'}
-  }
-  {
-    type: 'ADD_TODO',
-    text: 'Read the Redux docs.'
-  }
-  ```
+```javascript
+{
+  type: 'LIKE_ARTICLE',
+  articleId: 42
+}
+{
+  type: 'FETCH_USER_SUCCESS',
+  response: {id: 3, name:'Mary'}
+}
+{
+  type: 'ADD_TODO',
+  text: 'Read the Redux docs.'
+}
+```
 
-  ### Reducer
+### Reducer
 
-  - a function describing how the application's state changes.
+- a function describing how the application's state changes.
 
-  ```javascript
-  (previousState, action) => nextState;
-  // 이전 State와 action object를 받은 후에 next state를 return 한다.
-  ```
+```javascript
+(previousState, action) => nextState;
+// 이전 State와 action object를 받은 후에 next state를 return 한다.
+```
 
-  ### Store
+### Store
 
-  - The object that brings them together.  
-    A store holds the whole state tree of your application.  
-    The only way to change the state inside it is to dispatch an action on it.  
-    A store is not a class. It's just an object with a few methods on it.
+- The object that brings them together.  
+  A store holds the whole state tree of your application.  
+  The only way to change the state inside it is to dispatch an action on it.  
+  A store is not a class. It's just an object with a few methods on it.

@@ -2,7 +2,16 @@
 
 Node.js 기초 React.js 기초
 
+Node-React > `npm install package.json`
+
+Node-React/client > `npm install package.json`
+
+(Node & React run)  
+Node-React > `npm run dev`
+
 ## npm vs npx
+
+---
 
 ### What is npm?
 
@@ -17,7 +26,7 @@ Node.js 기초 React.js 기초
 
 ## Server
 
-### npm install package.json
+### NodeJS
 
 - npm install express --save
 - npm install mongoose --save
@@ -45,4 +54,13 @@ Node.js 기초 React.js 기초
 - npm install antd --save
 
 [DOM summary](./summary.md)  
-[React.js summary](./client/describe.md)
+[React.js summary](./client/React.md)
+
+### Setting Up Redux
+
+- npm install Redux
+- npm install react-redux
+- npm install redux-promise
+- npm install redux-thunk
+
+[Redux](./client/Redux.md)
