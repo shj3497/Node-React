@@ -53,8 +53,9 @@ Node-React > `npm run dev`
 
 - npm install antd --save
 
-[DOM summary](./summary.md)  
-[React.js summary](./client/React.md)
+  [DOM summary](./summary.md)
+
+  [React.js summary](./client/React.md)
 
 ### Setting Up Redux
 
@@ -63,4 +64,24 @@ Node-React > `npm run dev`
 - npm install redux-promise
 - npm install redux-thunk
 
-[Redux](./client/Redux.md)
+- Chrome Extension >> : Redux DevTools
+
+  [Redux summary](./client/Redux.md)
+
+<br />
+
+# 페이지 구성
+
+## 로그인 페이지
+
+1. 이메일
+2. 비밀번호
+3. 확인
+
+## 회원가입 페이지
+
+1. 이메일
+2. 이름
+3. 비밀번호
+4. 비밀번호 확인
+5. 확인

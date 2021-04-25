@@ -164,3 +164,51 @@ React Component - (Dispatch) -> Action --> Reducer --> Store - (Subscribe) -> Re
   A store holds the whole state tree of your application.  
   The only way to change the state inside it is to dispatch an action on it.  
   A store is not a class. It's just an object with a few methods on it.
+
+<br />
+
+# React VS React Hooks
+
+## React Component
+
+### 1. Class Component
+
+- Provide more features
+- Longer Code
+- More Complex Code
+- Slower Performance
+- ex)
+
+  ```JavaScript
+  import React, { Component } from "react";
+
+  export default class Hello extends Component {
+    render() {
+      return (
+        <div>
+          Hello My Friends!
+        </div>
+      )
+    }
+  }
+  ```
+
+### 2. Functional Component
+
+- Provide less features
+- Shotrer Code
+- Simpler Code
+- Faster Performance
+- ex)
+
+  ```JavaScript
+  import React from 'react'
+
+  export default function Hello(){
+    return (
+      <div>
+        Hello My Friends!
+      </div>
+    )
+  }
+  ```
