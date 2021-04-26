@@ -24,7 +24,7 @@ Node-React > `npm run dev`
 - Disk Space를 낭비하지 않을 수 있다.
 - 항상 최신버전을 사용할 수 있다.
 
-## Server
+## `Server`
 
 ### NodeJS
 
@@ -40,7 +40,17 @@ Node-React > `npm run dev`
 
 <!-- -dev : 로컬에서만 하겠다. -->
 
-## Client
+### MongoDB
+
+- server/config/dev.js 생성 후 자신의 MongoDB url 입력
+- ex)
+  ```javascript
+  module.exports = {
+    mongoURI: `mongodb+srv://<id>:<password>@node-react.j15yu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`,
+  };
+  ```
+
+## `Client`
 
 ### React.js
 
@@ -87,3 +97,7 @@ Node-React > `npm run dev`
 5. 확인
 
 ## 로그아웃 페이지
+
+## 인증체크
+
+1. 권한에 따라 진입 여부가 달라진다.

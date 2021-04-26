@@ -8,7 +8,11 @@ import {BrowserRouter as Router,
 import LandingPage from './components/views/LandingPage/LandingPage.js';
 import LoginPage from './components/views/LoginPage/LoginPage.js';
 import RegisterPage from './components/views/RegisterPage/RegisterPage.js';
+import Auth from './hoc/auth'
 
+// Auth(HOC)
+// const EnhancedComponent = higherOrderComponent(WrappedComponent);
+// ./src/hoc/auth.js 참고
 function App() {
   return (
     <Router>
@@ -22,13 +26,13 @@ function App() {
         */}
         <Switch>
           {/* exact path : 주어진 경로와 정확하게 맞아 떨어져야 설정한 컴포넌트를 보여준다. */}
-          <Route exact path="/"  component={LandingPage} >
+          <Route exact path="/"  component={Auth(LandingPage, null, true)} >
             {/* <LandingPage> */}
           </Route>
-          <Route exact path="/login" component={LoginPage} />
+          <Route exact path="/login" component={Auth(LoginPage, false)} />
           
-          <Route path="/register">
-            <RegisterPage />
+          <Route path="/register" component={Auth(RegisterPage, false)} >
+            {/* <RegisterPage /> */}
           </Route>
         </Switch>
       </div>
